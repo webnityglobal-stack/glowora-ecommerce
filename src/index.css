@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss"; 
 
 :root { font-family: 'DM Sans', sans-serif; color: #302823; background: #fbf6f1; font-synthesis: none; }
 * { box-sizing: border-box; }
