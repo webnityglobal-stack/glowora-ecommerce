@@ -1,0 +1,10 @@
+import { Link } from 'react-router-dom'
+import { Instagram, Facebook, ArrowUpRight } from 'lucide-react'
+export default function Footer(){return <footer className="bg-[#302823] text-[#f9f1eb] pt-16 pb-8">
+ <div className="container-wide grid md:grid-cols-4 gap-10 pb-14">
+  <div className="md:col-span-1"><div className="font-display text-4xl tracking-tight">glowora.</div><p className="text-sm text-[#c7b8ae] leading-7 mt-4 max-w-xs">Beauty that feels like you. Thoughtfully selected essentials for the rituals that make a day yours.</p><div className="flex gap-4 mt-6"><Instagram size={18}/><Facebook size={18}/></div></div>
+  <div><h4 className="text-[10px] tracking-[.2em] uppercase mb-5 text-[#d8aaa2]">Explore</h4><div className="flex flex-col gap-3 text-sm text-[#c7b8ae]"><Link to="/shop">Shop all</Link><Link to="/about">Our story</Link><Link to="/journal">Beauty journal</Link><Link to="/contact">Contact</Link></div></div>
+  <div><h4 className="text-[10px] tracking-[.2em] uppercase mb-5 text-[#d8aaa2]">Customer care</h4><div className="flex flex-col gap-3 text-sm text-[#c7b8ae]"><a href="#shipping">Shipping & returns</a><a href="#faq">FAQs</a><a href="#privacy">Privacy policy</a><a href="#terms">Terms & conditions</a></div></div>
+  <div><h4 className="text-[10px] tracking-[.2em] uppercase mb-5 text-[#d8aaa2]">A note from us</h4><p className="text-sm text-[#c7b8ae] leading-6 mb-4">Join our list for thoughtful beauty notes, new launches and 10% off your first order.</p><form onSubmit={e=>{e.preventDefault();alert('Thanks for subscribing!')}} className="flex border-b border-[#8f7d72] pb-2"><input required type="email" placeholder="Your email address" className="bg-transparent outline-none text-sm flex-1 min-w-0 placeholder:text-[#9f9087]"/><button aria-label="Subscribe"><ArrowUpRight size={18}/></button></form></div>
+ </div><div className="container-wide border-t border-[#5b4c43] pt-6 flex flex-col sm:flex-row justify-between gap-2 text-[10px] tracking-wider text-[#a9988d]"><span>© 2026 GLOWORA. ALL RIGHTS RESERVED.</span><span>MADE FOR YOUR EVERYDAY GLOW.</span></div>
+ </footer>}
