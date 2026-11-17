@@ -19,9 +19,62 @@ export default function Home(){
     <p className="text-[#66584f] text-sm sm:text-base leading-7 mt-6 max-w-md">Considered beauty essentials, made for real life. Discover little rituals that help you feel beautifully, unapologetically you.</p><div className="flex flex-wrap gap-3 mt-8"><Link to="/shop" className="btn-primary">Shop the collection <ArrowRight size={15}/></Link><Link to="/about" className="btn-outline">Our philosophy</Link></div><div className="flex items-center gap-3 mt-12 text-[15px] uppercase tracking-[.17em] text-[#75645b]"><span className="w-9 h-px bg-rose"/><span>Thoughtful formulas · Feel-good rituals</span></div></div></div>
   <div className="hidden lg:block absolute bottom-9 right-10 text-[9px] tracking-[.22em] uppercase [writing-mode:vertical-rl]">Beauty, thoughtfully — Est. 2024</div>
  </section>
- <section className="py-5 border-b border-[#eadfd7] bg-[#fffaf6]"><div className="container-wide grid grid-cols-2 md:grid-cols-4 gap-4 text-center">{[[Leaf,'Thoughtful essentials'],[Sparkles,'Feel-good formulas'],[HeartHandshake,'Made with care'],[Truck,'Easy doorstep delivery']].map(([Icon,t])=><div key={t} className="flex justify-center items-center gap-2 text-[10px] sm:text-xs tracking-wide text-[#76665d]"><Icon size={16} className="text-rose"/>{t}</div>)}</div></section>
+ <section className="py-5 border-b border-[#eadfd7] bg-[#fffaf6]"><div className="container-wide grid grid-cols-2 md:grid-cols-4 gap-4 text-center">{[[Leaf,'Thoughtful essentials'],[Sparkles,'Feel-good formulas'],[HeartHandshake,'Made with care'],[Truck,'Easy doorstep delivery']].map(([Icon,t])=><div key={t} className="flex justify-center items-center gap-2 text-[12px] sm:text-md tracking-wide text-[#76665d]"><Icon size={16} className="text-rose"/>{t}</div>)}</div></section>
  <section className="section-space container-wide"><SectionHeading eyebrow="Find your feel-good" title="Shop by ritual" description="A little something for every version of you."/><div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">{categories.map((c,i)=><Link to={`/shop?category=${c.name}`} key={c.name} className="group relative overflow-hidden aspect-[4/5] bg-blush"><img src={c.image} alt={c.name} className="w-full h-full object-cover transition duration-700 group-hover:scale-105"/><div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"/><div className="absolute bottom-5 left-5 text-white"><p className="font-display text-2xl sm:text-3xl">{c.name}</p><span className="text-[9px] tracking-[.17em] uppercase flex items-center gap-2 mt-2">Explore <ArrowRight size={12}/></span></div></Link>)}</div></section>
  <section className="bg-[#f2e8e1] py-16 sm:py-20"><div className="container-wide"><SectionHeading eyebrow="The feel-good edit" title="Little things. Lovely results." description="Meet the products our community keeps coming back to."/><div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 sm:gap-x-6 gap-y-9">{products.slice(0,4).map(p=><ProductCard key={p.id} product={p}/>)}</div><div className="text-center mt-10"><Link to="/shop" className="btn-outline">Explore all products <ArrowRight size={14}/></Link></div></div></section>
  <section className="container-wide section-space"><div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center"><div className="relative"><img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=1100&q=85" className="w-full aspect-[5/4] object-cover" alt="Minimal skincare products"/><span className="absolute -bottom-5 -right-4 bg-[#d9b8ad] w-28 h-28 rounded-full grid place-items-center text-center font-display text-lg leading-tight rotate-6">a little<br/>more you</span></div><div className="md:py-10"><p className="eyebrow mb-4">BEAUTY WITHOUT THE NOISE</p><h2 className="display-title text-5xl sm:text-6xl">Less pressure.<br/><em className="text-rose">More pleasure.</em></h2><p className="text-sm leading-7 text-[#81736a] mt-6 max-w-md">We believe beauty should feel like a moment for yourself, not another thing on your to-do list. That's why we bring together thoughtful essentials that make everyday care feel special.</p><Link to="/about" className="btn-primary mt-8">Get to know us <ArrowRight size={14}/></Link></div></div></section>
- <section className="bg-[#d9c2b6] py-16 text-center px-5"><p className="eyebrow">A NOTE TO YOUR INBOX</p><h2 className="display-title text-4xl sm:text-5xl mt-3">Your little dose of lovely.</h2><p className="text-sm text-[#66584f] mt-4">New launches, beauty notes and 10% off your first order.</p><form onSubmit={e=>{e.preventDefault();alert('Welcome to the Glowora community!')}} className="flex max-w-md mx-auto mt-7 border-b border-[#7e6a60] pb-2"><input type="email" required placeholder="Enter your email address" className="bg-transparent flex-1 min-w-0 outline-none text-sm placeholder:text-[#806e64]"/><button className="text-[10px] uppercase tracking-widest font-bold">Join us →</button></form></section>
+ {/* <section className="bg-[#d9c2b6] py-16 text-center px-5"><p className="eyebrow">A NOTE TO YOUR INBOX</p><h2 className="display-title text-4xl sm:text-5xl mt-3">Your little dose of lovely.</h2><p className="text-sm text-[#66584f] mt-4">New launches, beauty notes and 10% off your first order.</p><form onSubmit={e=>{e.preventDefault();alert('Welcome to the Glowora community!')}} className="flex max-w-md mx-auto mt-7 border-b border-[#7e6a60] pb-2"><input type="email" required placeholder="Enter your email address" className="bg-transparent flex-1 min-w-0 outline-none text-sm placeholder:text-[#806e64]"/><button className="text-[10px] uppercase tracking-widest font-bold">Join us →</button></form></section> */}
+
+
+
+<section className="relative overflow-hidden bg-gradient-to-br from-[#d9b8ad] via-[#e9d9cf] to-[#f7eee7] py-10 sm:py-10 text-center px-5">
+
+  {/* Decorative Elements */}
+  <div className="absolute top-0 left-0 w-40 h-40 rounded-full bg-white/20 blur-3xl"/>
+  <div className="absolute bottom-0 right-0 w-52 h-52 rounded-full bg-[#c58f83]/20 blur-3xl"/>
+
+  <div className="relative max-w-2xl mx-auto">
+
+    <span className="inline-block px-5 py-2 rounded-full border border-[#a9877b]/50 bg-white/30 text-[#755b51] text-[10px] tracking-[.22em] uppercase font-semibold mb-6">
+      ✨ A NOTE TO YOUR INBOX
+    </span>
+
+    <h2 className="display-title text-4xl sm:text-5xl lg:text-6xl leading-tight">
+      Your little dose of <em className="text-rose">lovely.</em>
+    </h2>
+
+    <p className="text-sm sm:text-base text-[#66584f] mt-5 leading-7">
+      New launches, beauty notes and 10% off your first order.
+      A little beauty inspiration, delivered straight to you.
+    </p>
+
+    <form
+      onSubmit={e=>{
+        e.preventDefault();
+        alert('Welcome to the Glowora community!');
+      }}
+      className="flex max-w-lg mx-auto mt-9 p-2 bg-white/80 backdrop-blur-md border border-white rounded-full shadow-lg shadow-[#8c6658]/10 focus-within:ring-2 focus-within:ring-[#bd8e83]/40 transition"
+    >
+      <input
+        type="email"
+        required
+        placeholder="Enter your email address"
+        className="bg-transparent flex-1 min-w-0 px-5 outline-none text-sm text-[#66584f] placeholder:text-[#a18b80]"
+      />
+
+      <button
+        type="submit"
+        className="bg-[#9d7167] hover:bg-[#80564e] text-white px-6 sm:px-8 py-4 rounded-full text-[10px] uppercase tracking-widest font-bold transition duration-300 whitespace-nowrap"
+      >
+        Join us →
+      </button>
+    </form>
+
+    <p className="text-[10px] tracking-wide text-[#806e64] mt-5">
+      Made with love. No spam, just lovely things.
+    </p>
+
+  </div>
+</section>
+
  </main><Footer/></>}
